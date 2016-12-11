@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_04ef6abdeb68d2d0d5680155932741c12594c3c0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.1_591c7e2b38cf55e0159773fd32151846550f4082\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_99ad2951a18d5877441a950f1dfa52ae685062a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\design\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.1_22665807385a195455da0a60757567c4d7b4ea87\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.0.1_5bfb0e3704360700172c31dafdaff1367707d406\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_ca33f99afbbe791a676d9cf75e2e0e63a6af3119\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_e3879167e738508fea480da4fbbe4884f5159d97\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_9ab2438d55c5ff125707f0a3243da3f92deea306\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_0934bd4154a76276662737f57abd78fe04a85668\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_43f3b4c95064e975d8eef35805c802c30797b6ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_a56ef2a2bdf285375fd919a985b87c3bf6a3719d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6869c5c607bf54336889942245a7fa2efd592ee0">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0454aeb3ddc5a54f776909788b3a39f096b80fd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_05b635391c305e7418af99e47e1ef50778c970d3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_f0e646316e4247460e759695644a17e9d6842521\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_c296179c3356558b9dfff795413378ad464f4bf9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fdd2014784bf94929e766151598994a3631698d8">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_32d0aa71c518ac51e0f168b9caeb586bb1953014\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.1_2cc0689c943883cf4079368a0222bdfd4f9f6410\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_fd3a0426193adf53bf63018e504b66f19b1e93b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_1fb40f40edc6c80ea5b1673ee0ca1726581c71ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_0e7b4a2cf32ea7c2676f6095f2edafe6a966d69d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\szb\AndroidStudioProjects\ToDoList_V1.1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_fae6d79d506134595a009f791c8a616b53af6fea\classes.dex" />
+    </item>
+
+</items>
