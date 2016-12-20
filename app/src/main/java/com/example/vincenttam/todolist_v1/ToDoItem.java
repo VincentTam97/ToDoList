@@ -5,7 +5,7 @@ package com.example.vincenttam.todolist_v1;
  */
 
 public class ToDoItem {
-    String itemID;
+    int itemID;
     String Title;
     String Detail;
     int isCompleted;
@@ -14,7 +14,7 @@ public class ToDoItem {
     String addTime;
     String completedTime;
 
-    ToDoItem (String itemID,String Title, String Detail, String itemType) {
+    ToDoItem (int itemID,String Title, String Detail, String itemType) {
         this.itemID=itemID; 
         this.Title = Title;
         if (Detail.length() > 0)
@@ -22,6 +22,7 @@ public class ToDoItem {
 
         this.addTime = addTime;
         this.isCompleted = 0;
+        this.isDeleted = 0;
         this.itemType = itemType;
     }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/all_items_list"
+            android:checked="true"
+            android:icon="@drawable/fab_ic_add"
+            android:title="全部待办事项"/>
+
+        <item
+            android:id="@+id/work_items_list"
+            android:icon="@drawable/fab_ic_add"
+            android:title="工作"/>
+
+        <item
+            android:id="@+id/life_items_list"
+            android:icon="@drawable/fab_ic_add"
+            android:title="生活"/>
+
+        <item
+            android:id="@+id/study_items_list"
+            android:icon="@drawable/fab_ic_add"
+            android:title="学习"/>
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/trash_list"
+            android:icon="@drawable/fab_ic_add"
+            android:title="垃圾箱"/>
+    </group>
+</menu>

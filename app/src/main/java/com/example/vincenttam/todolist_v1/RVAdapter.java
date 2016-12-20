@@ -71,7 +71,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ItemsViewHolder> {
     public void onItemDismiss(int position) {
 
         //找到对应的元素
-        String getID = MainActivity.items.get(position).itemID;
+        int getID = MainActivity.items.get(position).itemID;
         String getTitle=MainActivity.items.get(position).Title;
         System.out.println(getTitle);
         System.out.println(getID);

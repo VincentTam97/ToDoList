@@ -3,6 +3,8 @@ package com.example.vincenttam.todolist_v1;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +29,7 @@ public class EditTextActivity extends AppCompatActivity {
 
         /***设置默认事项***/
         {
+            itemType = "Work";
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss ");
             SimpleDateFormat formatterTitle = new SimpleDateFormat("yyMMddHHmmss");
             Date curDate = new Date(System.currentTimeMillis());//获取当前时间
@@ -60,29 +63,28 @@ public class EditTextActivity extends AppCompatActivity {
                 String Detail=editText2.getText().toString();
 
                 StuDBHelper dbHelper = new StuDBHelper(EditTextActivity.this,"stu_db",null,1);
-//得到一个可写的数据库  
+                //得到一个可写的数据库  
                 SQLiteDatabase db =dbHelper.getWritableDatabase();
                 SimpleDateFormat formatterTitle = new SimpleDateFormat("yyMMddHHmmss");
                 Date curDate = new Date(System.currentTimeMillis());//获取当前时间
                 String strTitle = formatterTitle.format(curDate);
 
-//生成ContentValues对象 //key:列名，value:想插入的值   
+                //生成ContentValues对象 //key:列名，value:想插入的值   
                 ContentValues cv = new ContentValues();
-//往ContentValues对象存放数据，键-值对模式  
-                System.out.println(strTitle);
-                cv.put("itemID",strTitle);
+                //往ContentValues对象存放数据，键-值对模式  
                 cv.put("Title", Title);
                 cv.put("Detail",Detail);
                 cv.put("isCompleted", 0);
+                cv.put("isDeleted", 0);
                 cv.put("addTime", "now");
                 cv.put("completedTime", "after");
                 cv.put("itemType", itemType);
-//调用insert方法，将数据插入数据库  
+                //调用insert方法，将数据插入数据库  
                 db.insert("stu_table", null, cv);
-//关闭数据库  
+                //关闭数据库  
                 db.close();
 
-                Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show();
                 EditTextActivity.this.finish();
                 return true;
             default:
@@ -91,6 +93,9 @@ public class EditTextActivity extends AppCompatActivity {
     }
     /***点击完成键的响应代码***/
 
+
+
+    /***选择分类***/
     public void typeLifeSelected(View view) {
         ImageView imageView_life = (ImageView)this.findViewById(R.id.image_life);
         imageView_life.setImageResource(R.drawable.life_selected);

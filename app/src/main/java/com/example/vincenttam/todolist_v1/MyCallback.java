@@ -18,10 +18,10 @@ public class MyCallback extends ItemTouchHelper.Callback {
         if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
             dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN |
                         ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
-            swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+            swipeFlags = ItemTouchHelper.START;
         } else {
             dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-            swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+            swipeFlags = ItemTouchHelper.START;
         }
 
         return makeMovementFlags(dragFlags, swipeFlags);
@@ -49,6 +49,7 @@ public class MyCallback extends ItemTouchHelper.Callback {
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+
         MainActivity.adapter.onItemDismiss(viewHolder.getAdapterPosition());
     }
 

@@ -15,10 +15,11 @@ public class DatabaseControl{
     public static void getData(Cursor cursor,List<ToDoItem> items){
 
         while(cursor.moveToNext()){
-            String itemID = cursor.getString(cursor.getColumnIndex("itemID"));
+            int itemID = cursor.getInt(cursor.getColumnIndex("itemID"));
             String Title = cursor.getString(cursor.getColumnIndex("Title"));
             String Detail = cursor.getString(cursor.getColumnIndex("Detail"));
             String isCompleted = cursor.getString(cursor.getColumnIndex("isCompleted"));
+            String isDeleted = cursor.getString(cursor.getColumnIndex("isDeleted"));
             String addTime = cursor.getString(cursor.getColumnIndex("addTime"));
             String completedTime = cursor.getString(cursor.getColumnIndex("completedTime"));
             String itemType = cursor.getString(cursor.getColumnIndex("itemType"));
