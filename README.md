@@ -1,2 +1,21 @@
-# ToDoList
-a simple android project
+# ToDoList - 待办事项清单
+
+一个简单的待办事项清单工具。你需要做的事，写在里面即可。
+
+- Android Project
+- 添加事项、备注说明、类别选择、滑动删除
+
+
+
+
+#### Why？
+
+BIT-JAVA课程设计
+
+
+
+#### ByWho？
+
+- 1120141861
+
+- 1120141860
