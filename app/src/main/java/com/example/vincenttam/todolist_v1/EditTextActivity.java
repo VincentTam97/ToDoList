@@ -1,10 +1,7 @@
 package com.example.vincenttam.todolist_v1;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -40,7 +36,6 @@ public class EditTextActivity extends AppCompatActivity {
             EditText default_Detail = (EditText) findViewById(R.id.edit_detail);
             default_Detail.setText(str);
         }
-        /***设置默认事项***/
     }
 
     @Override
@@ -62,7 +57,7 @@ public class EditTextActivity extends AppCompatActivity {
                 EditText editText2 =(EditText)findViewById(R.id.edit_detail);
                 String Detail=editText2.getText().toString();
 
-                StuDBHelper dbHelper = new StuDBHelper(EditTextActivity.this,"stu_db",null,1);
+                MyDBHelper dbHelper = new MyDBHelper(EditTextActivity.this,"stu_db",null,1);
                 //得到一个可写的数据库  
                 SQLiteDatabase db =dbHelper.getWritableDatabase();
                 SimpleDateFormat formatterTitle = new SimpleDateFormat("yyMMddHHmmss");
@@ -91,7 +86,6 @@ public class EditTextActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    /***点击完成键的响应代码***/
 
 
 

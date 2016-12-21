@@ -12,6 +12,7 @@ import java.util.Collections;
 
 public class MyCallback extends ItemTouchHelper.Callback {
 
+    /***设置允许滑动的方向***/
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         final int dragFlags, swipeFlags;
@@ -47,6 +48,8 @@ public class MyCallback extends ItemTouchHelper.Callback {
         return true;
     }
 
+
+    /***设置滑动响应事件***/
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
 

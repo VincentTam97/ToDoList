@@ -16,17 +16,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-
-import static com.example.vincenttam.todolist_v1.R.id.rv;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         //toolbar.setSubtitle("这里是子标题");
         //Toast.makeText(this,"onCreate！",Toast.LENGTH_SHORT).show();
         setSupportActionBar(toolbar);
-        StuDBHelper dbHelper = new StuDBHelper(this,"stu_db",null,1);
+        MyDBHelper dbHelper = new MyDBHelper(this,"stu_db",null,1);
         //得到一个可读的SQLiteDatabase对象  
         SQLiteDatabase db =dbHelper.getWritableDatabase();
 
@@ -94,27 +90,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    protected void onStart1(String type){
-        adapter = new RVAdapter(MainActivity.this, initializeItems(type));
-        RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        rv.setLayoutManager(llm);
-        rv.setAdapter(adapter);
-
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new MyCallback());
-        itemTouchHelper.attachToRecyclerView(rv);
-    }
 
 
-    //启动新的Activity：添加事项
+
+    /***启动新的Activity：添加事项***/
     public void newItem(View view) {
         Intent intent = new Intent(this,EditTextActivity.class);
         startActivity(intent);
     }
 
+
+    /***从列表中删除一个事项***/
     public void delete(int itemID){
         //System.out.println("删除");
-        StuDBHelper dbHelper = new StuDBHelper(this,"stu_db",null,1);
+        MyDBHelper dbHelper = new MyDBHelper(this,"stu_db",null,1);
         SQLiteDatabase db =dbHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("isDeleted",1);
@@ -130,6 +119,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /***刷新列表***/
+    protected void refreshList(String type){
+        adapter = new RVAdapter(MainActivity.this, initializeItems(type));
+        RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        rv.setLayoutManager(llm);
+        rv.setAdapter(adapter);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new MyCallback());
+        itemTouchHelper.attachToRecyclerView(rv);
+    }
+
+    /***设置主Activity的NavigationDrawer菜单***/
     public void setUpDrawer() {
         NavigationView navigationView = (NavigationView)findViewById(R.id.main_navigation_view);
         final DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
@@ -142,27 +144,27 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.all_items_list:
                         toolbar.setTitle("待办事项");
                         FAB.show();
-                        onStart1("ALL");
+                        refreshList("ALL");
                         break;
                     case R.id.work_items_list:
                         toolbar.setTitle("工作");
                         FAB.hide();
-                        onStart1("WORK");
+                        refreshList("WORK");
                         break;
                     case R.id.life_items_list:
                         toolbar.setTitle("生活");
                         FAB.hide();
-                        onStart1("LIFE");
+                        refreshList("LIFE");
                         break;
                     case R.id.study_items_list:
                         toolbar.setTitle("学习");
                         FAB.hide();
-                        onStart1("STUDY");
+                        refreshList("STUDY");
                         break;
                     case R.id.trash_list:
                         toolbar.setTitle("垃圾箱");
                         FAB.hide();
-                        onStart1("TRASH");
+                        refreshList("TRASH");
                         break;
                     default:
                         break;
@@ -174,14 +176,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
-
+    /***生成RecyclerView的数据集***/
     public static List<ToDoItem> items;
     private List<ToDoItem> initializeItems(String type) {
         items = new ArrayList<>();
         //得到一个可读的数据库  
-        StuDBHelper dbHelper = new StuDBHelper(this,"stu_db",null,1);
+        MyDBHelper dbHelper = new MyDBHelper(this,"stu_db",null,1);
         SQLiteDatabase db =dbHelper.getReadableDatabase();
         //Cursor cursor = db.query("stu_table", new String[]{"itemID","Title","Detail","isCompleted","isDeleted","addTime","completedTime","itemType"}, "isDeleted=?", new String[]{"0"}, null, null, "itemID desc");
         Cursor cursor = null;
