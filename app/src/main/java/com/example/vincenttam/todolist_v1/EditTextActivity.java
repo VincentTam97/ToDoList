@@ -4,15 +4,19 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class EditTextActivity extends AppCompatActivity {
 
@@ -32,10 +36,26 @@ public class EditTextActivity extends AppCompatActivity {
             String str = formatter.format(curDate);
             String strTitle = formatterTitle.format(curDate);
             EditText default_Title = (EditText) findViewById(R.id.edit_title);
-            default_Title.setText("事件 " + strTitle);
+            //default_Title.setText("事件 " + strTitle);
             EditText default_Detail = (EditText) findViewById(R.id.edit_detail);
-            default_Detail.setText(str);
+            //default_Detail.setText(str);
         }
+
+
+        TextView titleTextView = (TextView)findViewById(R.id.fixed_title);
+        titleTextView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String[] titleTips = {"别忘了：","记得去：","还没做：","重要：","完成："};
+                Random randomSeed = new Random();
+                int i = randomSeed.nextInt(5)%(5+1);
+                EditText default_Title = (EditText) findViewById(R.id.edit_title);
+                default_Title.setText(titleTips[i]);
+                return false;
+            }
+        });
+
+
     }
 
     @Override
@@ -51,18 +71,25 @@ public class EditTextActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.edit_done:
 
+                SimpleDateFormat formatter = new SimpleDateFormat("MM月dd日 HH:mm");
+                Date curDate = new Date(System.currentTimeMillis());//获取当前时间
+                String str = formatter.format(curDate);
+
                 EditText editText1 =(EditText)findViewById(R.id.edit_title);
                 String Title=editText1.getText().toString();
 
                 EditText editText2 =(EditText)findViewById(R.id.edit_detail);
                 String Detail=editText2.getText().toString();
 
+                if (Detail.equals(""))
+                    Detail += str;
+                else
+                    Detail = Detail + "  |  " + str;
+
                 MyDBHelper dbHelper = new MyDBHelper(EditTextActivity.this,"stu_db",null,1);
                 //得到一个可写的数据库  
                 SQLiteDatabase db =dbHelper.getWritableDatabase();
-                SimpleDateFormat formatterTitle = new SimpleDateFormat("yyMMddHHmmss");
-                Date curDate = new Date(System.currentTimeMillis());//获取当前时间
-                String strTitle = formatterTitle.format(curDate);
+
 
                 //生成ContentValues对象 //key:列名，value:想插入的值   
                 ContentValues cv = new ContentValues();
@@ -87,6 +114,10 @@ public class EditTextActivity extends AppCompatActivity {
         }
     }
 
+
+    public void detailClicked(View view) {
+        Toast.makeText(this, "说明部分会自动添加当前时间", Toast.LENGTH_SHORT).show();
+    }
 
 
     /***选择分类***/

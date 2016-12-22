@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="#4998f2">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/dribbble_materialdesign"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="25dp"
+        android:text="待办事项清单"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+</RelativeLayout>

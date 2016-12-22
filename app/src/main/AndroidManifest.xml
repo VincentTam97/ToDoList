@@ -6,21 +6,29 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="待办事项"
             android:theme="@style/AppTheme">
+
+        </activity>
+
+        <activity
+            android:name=".EditTextActivity"
+            android:label="添加一个待办事项"
+            android:theme="@style/AppEditTextTheme">
+        </activity>
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="待办事项"
+            android:theme="@style/SplashTheme"
+            android:icon="@drawable/applogo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <activity android:name=".EditTextActivity"
-            android:label="添加一个待办事项"
-            android:theme="@style/AppEditTextTheme" >
-
         </activity>
     </application>
 

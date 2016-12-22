@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="3fda01f71ae2de010301bd2f03009ebb0cb7a011">
+        sha1="3adc4daf80defabd43e4aad7d80da56eb0d0a428">
         <dex dex="/Users/VincentTam/AndroidStudioProjects/ToDoList_V1.2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4cbcc7366f697f67c483e45b92913ef0ec922e4/classes.dex" />
     </item>
     <item
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="a243475f178bf07fc549aca220958a05a1e661d7">
+        sha1="bc8feef24069db40583ed67180eac272ff308a28">
         <dex dex="/Users/VincentTam/AndroidStudioProjects/ToDoList_V1.2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e8a36a063ad33082f65833666bbd9a5a792d7a8f/classes.dex" />
     </item>
     <item

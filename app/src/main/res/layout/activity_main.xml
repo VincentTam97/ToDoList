@@ -57,6 +57,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:itemTextColor="@color/cardview_dark_background"
+        app:headerLayout="@layout/navigation_drawer_header"
         app:menu="@menu/menu_drawer_main_activity"/>
 
 </android.support.v4.widget.DrawerLayout>

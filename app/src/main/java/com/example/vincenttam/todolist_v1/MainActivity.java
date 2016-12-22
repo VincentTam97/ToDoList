@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public static RVAdapter adapter;
     public static MainActivity instance = null;
 
-    //public DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
 
 
 
@@ -68,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db =dbHelper.getWritableDatabase();
 
         setUpDrawer();
+
+        // 打開 up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        // 實作 drawer toggle 並放入 toolbar
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+        mDrawerToggle.syncState();
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
     public Context getContext(){
         return this;
@@ -87,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new MyCallback());
         itemTouchHelper.attachToRecyclerView(rv);
         toolbar.setTitle("待办事项");
+
     }
 
 
@@ -104,14 +115,24 @@ public class MainActivity extends AppCompatActivity {
     public void delete(int itemID){
         //System.out.println("删除");
         MyDBHelper dbHelper = new MyDBHelper(this,"stu_db",null,1);
-        SQLiteDatabase db =dbHelper.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put("isDeleted",1);
+        SQLiteDatabase dbWriter =dbHelper.getWritableDatabase();
+        SQLiteDatabase dbReader =dbHelper.getReadableDatabase();
+        ContentValues cvW = new ContentValues();
+
+
         String whereClauses = "itemID=?";
         String [] where = {Integer.toString(itemID)};
-        db.update("stu_table", cv, whereClauses, where);
+
+        Cursor cursor = dbReader.query("stu_table", new String[]{"itemID","isDeleted"}, "itemID=?", new String[]{Integer.toString(itemID)}, null, null, null);
+        cursor.moveToNext();
+        if (cursor.getString(cursor.getColumnIndex("isDeleted")).equals("1"))
+            cvW.put("isDeleted",2);
+        else
+            cvW.put("isDeleted",1);
+
+        dbWriter.update("stu_table", cvW, whereClauses, where);
         //db.delete("stu_table",whereClauses,where);
-        db.close();
+        dbWriter.close();
         //Toast.makeText(this,"删除成功",Toast.LENGTH_SHORT).show();
 
         CoordinatorLayout coordinatorLayout = (CoordinatorLayout)findViewById(R.id.activity_main);
